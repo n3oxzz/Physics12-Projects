@@ -10,7 +10,7 @@
 import matplotlib.pyplot as plt
 
 dt = 0.1 #time step is small (s)
-m0 = 5e3 #initial fuel mass
+m0 = 5e7 #initial fuel mass
 M = 1e4#rocket mass when empty
 fuelRate = 2#kg/s burn rate
 u = 1000 #m/s fuel ejection relative speed
@@ -25,7 +25,7 @@ m = m0
 vs = [u]
 ts = [t]
 
-while m>2000:            
+while m > 2000:            
    dm = fuelRate * dt
    m -= dm #fuel mass after burn 
    Mtotal = M + m #rocket and fuel
